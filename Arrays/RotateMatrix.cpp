@@ -5,21 +5,21 @@ class Solution {
 public:
     void rotate(vector<vector<int>>& matrix) {
 
-     int n= matrix.size();
+     int length = matrix.size();
     
     //taking the transpose
-     for(int i=0;i<n;i++){
-         for (int j=0;j<n-i-1;j++){
-             swap(matrix[i][j],matrix[n-1-j][n-i-1]);
+     for(int row=0;row<length;row++){
+         for (int column=0;column<length-row-1;column++){
+             swap(matrix[row][column],matrix[length-1-column][length-row-1]);
          }
      }
 
 
      //Reversing the order of the numbers by column
 
-     for(int column=0;column<n;column++){
-        for(int row=0;row<n/2;row++){
-            swap(matrix[row][column],matrix[n-row-1][column]);
+     for(int column=0;column<length;column++){
+        for(int row=0;row<length/2;row++){
+            swap(matrix[row][column],matrix[length-row-1][column]);
         }
      }
 

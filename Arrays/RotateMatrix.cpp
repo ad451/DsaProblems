@@ -17,10 +17,11 @@ public:
 
      //Reversing the order of the numbers by column
 
-     
-
-    
-
+     for(int column=0;column<n;column++){
+        for(int row=0;row<n/2;row++){
+            swap(matrix[row][column],matrix[n-row-1][column]);
+        }
+     }
 
     }
 };

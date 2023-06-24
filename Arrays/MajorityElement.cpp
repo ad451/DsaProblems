@@ -52,8 +52,8 @@ int main(){
     
     // cout<<(ans>=0)?(ans):("Majority element does not exist")<<endl;
     if(ans==-1){
-        cout<<"Majority element does not exist"<<endl;
+        std::cout<<"Majority element does not exist"<<endl;
     }
-    else cout<<ans<<endl;
+    else std::cout<<ans<<endl;
 
 }

@@ -5,13 +5,13 @@ class Solution {
 public:
     int majorityElement(vector<int> array) {
 
-       int currAns = array.front();
-       int count=0;
+       int currAns = array.front(); //initializing the ans as the front element
+       int count=1; //initializing the count 
        
        for(int i=0;i<array.size();i++){
         if(currAns!=array[i]){
             count--;
-            if(!count){
+            if(!count){ // if count ==0 , we change the currans and change the count value back to one
                 count=1;
                 currAns=array[i];
             }
@@ -21,7 +21,8 @@ public:
             count++;
         }
        }
-
+       
+       //code to check if the candidate for majority element is actually the ans
        count=0;
 
        for(int j=0;j<array.size();j++){
